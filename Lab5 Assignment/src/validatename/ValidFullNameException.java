@@ -10,7 +10,8 @@ public class ValidFullNameException {
 		 * input from the user
 		 */
 		System.out.println("Enter First Name of an Employee");
-		String fname = sc.next(); // first name of an employee
+		String fname = sc.next();
+		
 		System.out.println("Enter Last Name of an Employee");
 		String lname = sc.next(); // last name of an employee
 		sc.close(); // scanner close
@@ -21,25 +22,11 @@ public class ValidFullNameException {
 			 * last name contain digit if string contain digit then throw
 			 * InvalidNameException
 			 */
-			if (fname == "" || fname == null || lname == "" || lname == null) {
+			if (fname.equals("null")||lname.equals("null")) {
 
-				throw new InvalidNameException("Please Enter Full Name of an Employee");
+				throw new InvalidNameException("Please Enter valid  Name of an Employee");
 				
-			} else if (fname.matches(".*\\d.*") && lname.matches(".*\\d.*")) { // check first and last name containing
-																				// digit
-				throw new InvalidNameException("Enter Valid Full Name of an Employee");
-
-			} else if (fname.matches(".*\\d.*")) { // check first name containing digit
-
-				throw new InvalidNameException("Enter Valid First Name of an Employee");
-
-			} else if (lname.matches(".*\\d.*")) { // check last name containing digit
-
-				throw new InvalidNameException("Enter Valid Last Name of an Employee");
-
-			} else {
-				System.out.println("Full Name of an Employee is " + fname + " " + lname);
-			}
+			} 
 		} catch (InvalidNameException e) {
 			// print the exception
 			System.out.println(e.getMessage());
