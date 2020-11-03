@@ -1,3 +1,6 @@
+//Author:Sushma
+//Date:11/03/2020
+//Desc:Java program to validate name
 package validatename;
 import java.util.*;
 public class ValidFullNameException {

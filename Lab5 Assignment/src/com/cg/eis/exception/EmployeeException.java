@@ -1,3 +1,6 @@
+//Author:Sushma
+//Date:11/03/2020
+//Desc:Java Program to check about salary
 package com.cg.eis.exception;
 import java.util.*;
 public class EmployeeException {
